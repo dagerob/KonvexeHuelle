@@ -18,6 +18,7 @@ void RenderingWindow::setHullPoints(const std::vector<Point> &points){
 	 }
  }
 
+ // connects two points by drawing a line between them
  void RenderingWindow::bindPoints(const std::vector<Point> &points, sf::Color color) const {
 	std::vector<sf::Vertex> vertices;
 	for (auto point : points) {

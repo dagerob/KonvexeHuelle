@@ -11,12 +11,11 @@ public:
 	static std::vector<Point> getData(int length, int seed) {
 		// initialize engine with a seed
 		std::default_random_engine e1(seed);
-		std::default_random_engine e2(seed + seed);
-		std::uniform_int_distribution<int> uniform_dist(10, 490);
+		std::uniform_int_distribution<int> uniform_dist(10, 990);
 
 		std::vector<Point> dataToReturn;
 		for (int i = 0; i < length; i++) {
-			dataToReturn.push_back({ (double)uniform_dist(e1), (double)uniform_dist(e2) });
+			dataToReturn.push_back({ (double)uniform_dist(e1), (double)uniform_dist(e1) });
 		}
 		return dataToReturn;
 	}
